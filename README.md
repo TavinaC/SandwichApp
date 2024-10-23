@@ -1,7 +1,9 @@
-Tavina Chen
-May 6 2024
-CS1400 
-Project 2: Sandwich App
+## Project 2: Sandwich App
+By: Tavina Chen </br>
+Date: May 6 2024 </br>
+Class: CS1400 </br>
+
+### Project Description:
 
 	This program provides input validation for all inputs.
 	
