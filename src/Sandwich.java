@@ -1,15 +1,15 @@
-//Tavina Chen
-//May 6 2024
-//CS1400 
-//Project 2: Sandwich App: Sandwich class
-
-//This class simulates the sandwich entity in real world. It has attributes of bread, vegetables,
-//meat, and price of the sandwich, and corresponding methods.
-
+/**
+ * This class simulates the sandwich entity in real world. It has attributes of bread, vegetables,
+ * meat, and price of the sandwich, and corresponding methods.
+ */
 public class Sandwich {
 	private String bread = "", vegetables = "", meat = "";
 	private double price = 0;
 	
+	/**
+	 * Sets the bread type for the sandwich.
+	 * @param b The corresponding number to the type of bread on the menu.
+	 */
 	public void setBread(int b) {
 		switch (b) {
 		case 1:
@@ -31,6 +31,10 @@ public class Sandwich {
 		}
 	}
 	
+	/**
+	 * Sets the vegetables for the sandwich.
+	 * @param v The corresponding number to the type of vegetables on the menu.
+	 */
 	public void setVeg(int v) {
 		switch (v) {
 		case 1:
@@ -64,10 +68,18 @@ public class Sandwich {
 		}
 	}
 	
+	/**
+	 * Allows for a comma to be inserted between vegetable selections
+	 * if more than 1 is chosen.
+	 */
 	public void appendVeg() {
 		vegetables += ", ";
 	}
 	
+	/**
+	 * Sets the meat type for the sandwich.
+	 * @param m The corresponding number to the type of meat on the menu.
+	 */
 	public void setMeat(int m) {
 		switch (m) {
 		case 1:
@@ -89,10 +101,16 @@ public class Sandwich {
 		}
 	}
 	
+	/**
+	 * @return The bread type.
+	 */
 	public String getBread() {
 		return bread;
 	}
 	
+	/**
+	 * @return The vegetables. If no vegetables were chosen, returns "no vegetables".
+	 */
 	public String getVeg() {
 		if (vegetables.equals("")) {
 			return "no vegetables";
@@ -101,6 +119,9 @@ public class Sandwich {
 		}
 	}
 	
+	/**
+	 * @return The meat in the sandwich.
+	 */
 	public String getMeat() {
 		if (meat.equals("")) {
 			return "no meat";
@@ -109,6 +130,9 @@ public class Sandwich {
 		}
 	}
 	
+	/**
+	 * @return The total price of the sandwich.
+	 */
 	public String getPrice() {
 		return String.format("%.2f", price);
 	}

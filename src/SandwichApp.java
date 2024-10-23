@@ -1,8 +1,12 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Sandwich app demo. See README.md for more information.
+ */
 public class SandwichApp {
 	
+	/** @throws IOException */
 	public static void main(String[] args) throws IOException {
 		
 		//Orders the first sandwich
@@ -12,9 +16,12 @@ public class SandwichApp {
 		continueOrder();
 	}
 	
+	/**
+	 * This method orders a single Sandwich.
+	 * @throws IOException
+	 */
     @SuppressWarnings("ConvertToTryWithResources")
 	public static void orderSandwich() throws IOException {
-		//This method orders a single sandwich.
 		Scanner in = new Scanner(System.in);
 		
 		Order order = new Order();
@@ -52,6 +59,12 @@ public class SandwichApp {
 		in.close();
 	}
 	
+	/**
+	 * This method validates integer is within range.
+	 * @param max The max integer allowed.
+	 * @param msg The message printed to ask the user for input.
+	 * @return The validated integer value.
+	 */
 	public static int validate(int max, String msg) {
 		//Checks the upper bound of a valid integer input.
 		int value = validInt();
@@ -65,6 +78,10 @@ public class SandwichApp {
 		return value;
 	}
 	
+	/**
+	 * Validates the input as an integer.
+	 * @return The validated input if it is a valid integer > 0.
+	 */
     @SuppressWarnings("ConvertToTryWithResources")
 	public static int validInt() {
 		//Validates input and returns the value if it is an integer > 0.
@@ -90,10 +107,14 @@ public class SandwichApp {
 		return input; 
 	}
 
+	/**
+	 * This method asks the user if they would like to continue ordering and validates that input. 
+	 * Only "y" "Y" "n" and "N" are valid inputs.
+	 * @throws IOException
+	 */
     @SuppressWarnings("ConvertToTryWithResources")
 	public static void continueOrder() throws IOException {
-		//This method asks the user if they would like to continue ordering and validates that input. 
-		//Only "y" "Y" "n" and "N" are valid inputs. 
+		 
 		Scanner in = new Scanner(System.in);
 		String input = "y";
 		
